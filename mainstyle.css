@@ -1,4 +1,5 @@
-          :root {
+   
+        :root {
             --navy-blue: #000080;
             --white: #FFFFFF;
             --blue: #1E90FF;
@@ -1849,4 +1850,3 @@
         .floating {
             animation: float 6s ease-in-out infinite;
         }
-    
