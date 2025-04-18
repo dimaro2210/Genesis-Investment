@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<!-- signup.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | Genesis Investments</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="signup.css"/>
+  </head>
+<body>
+    <div class="signup-container">
+        <div class="logo">
+            <img src="https://via.placeholder.com/50x50" alt="Genesis Logo">
+            <h2>Create Your Account</h2>
+        </div>
+
+        <div class="success-message" id="success-message">
+            Account created successfully! Redirecting to dashboard...
+        </div>
+
+        <form id="signup-form" action="signup.php" method="POST">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" class="form-control" required>
+                <i class="fas fa-user input-icon"></i>
+                <div class="error-message" id="name-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" class="form-control" required>
+                <i class="fas fa-envelope input-icon"></i>
+                <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" class="form-control" required>
+                <i class="fas fa-lock input-icon"></i>
+                <div class="error-message" id="password-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm_password" class="form-control" required>
+                <i class="fas fa-lock input-icon"></i>
+                <div class="error-message" id="confirm-error"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select id="country" name="country" class="form-control" required>
+                    <option value="">Select Country</option>
+                    <option value="US">United States</option>
+                    <option value="UK">United Kingdom</option>
+                    <option value="CA">Canada</option>
+                    <option value="AU">Australia</option>
+                    <option value="DE">Germany</option>
+                    <option value="JP">Japan</option>
+                    <option value="SG">Singapore</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn">Create Account</button>
+
+            <div class="terms">
+                By creating an account, you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>.
+            </div>
+        </form>
+
+        <div class="login-link">
+            Already have an account? <a href="login.html">Log in</a>
+        </div>
+    </div>
+
+    <script>
+        // Form validation
+        const form = document.getElementById('signup-form');
+        const password = document.getElementById('password');
+        const confirmPassword = document.getElementById('confirm-password');
+        const email = document.getElementById('email');
+        const name = document.getElementById('fullname');
+
+        form.addEventListener('submit', function(e) {
+            let isValid = true;
+
+            // Name validation
+            if (name.value.trim() === '') {
+                document.getElementById('name-error').textContent = 'Full name is required';
+                document.getElementById('name-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('name-error').style.display = 'none';
+            }
+
+            // Email validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value)) {
+                document.getElementById('email-error').textContent = 'Please enter a valid email address';
+                document.getElementById('email-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('email-error').style.display = 'none';
+            }
+
+            // Password validation
+            if (password.value.length < 8) {
+                document.getElementById('password-error').textContent = 'Password must be at least 8 characters';
+                document.getElementById('password-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('password-error').style.display = 'none';
+            }
+
+            // Confirm password validation
+            if (password.value !== confirmPassword.value) {
+                document.getElementById('confirm-error').textContent = 'Passwords do not match';
+                document.getElementById('confirm-error').style.display = 'block';
+                isValid = false;
+            } else {
+                document.getElementById('confirm-error').style.display = 'none';
+            }
+
+            if (!isValid) {
+                e.preventDefault();
+            } else {
+                // Simulate successful submission (in a real app, this would be handled by the PHP response)
+                e.preventDefault();
+                document.getElementById('success-message').style.display = 'block';
+                form.style.display = 'none';
+                setTimeout(() => {
+                    window.location.href = 'dashboard.html';
+                }, 2000);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genesis Investments | Next-Gen Crypto Platform (2025)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+ <link rel="stylesheet" href="mainstyle.css"/>
+</head>
+<body>
+    <!-- 3D Background Animation -->
+    <div id="threejs-container" class="threejs-container"></div>
+
+    <!-- Dual Header System -->
+    <div class="header-one">
+        <div class="logo">
+            <img src="https://via.placeholder.com/40x40" alt="Genesis Logo">
+            <span>Genesis Investments</span>
+        </div>
+        
+    </div>
+    
+    <div class="header-two">
+        <button class="mobile-menu-btn" id="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="fade-in">The Future of Crypto Investing</h1>
+                <p class="fade-in delay-1">Genesis Investments provides cutting-edge digital asset solutions with institutional-grade security and performance. Updated for 2025 market conditions.</p>
+                <div class="price-ticker fade-in delay-2">
+                    <div class="coin-price">
+                        <i class="fab fa-bitcoin"></i>
+                        <span>BTC: $<span id="btc-price">68,420</span> <span class="price-up">+5.2%</span></span>
+                    </div>
+                    <div class="coin-price">
+                        <i class="fab fa-ethereum"></i>
+                        <span>ETH: $<span id="eth-price">3,850</span> <span class="price-up">+3.8%</span></span>
+                    </div>
+                    <div class="coin-price">
+                        <i class="fas fa-coins"></i>
+                        <span>SOL: $<span id="sol-price">210</span> <span class="price-down">-1.5%</span></span>
+                    </div>
+                    <div class="coin-price">
+                        <i class="fas fa-dollar-sign"></i>
+                        <span>USDC: $<span id="usdc-price">1.00</span> <span class="price-up">+0.0%</span></span>
+                    </div>
+                </div>
+                <div class="fade-in delay-3">
+                    <a href="signup.html" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                    <a href="#about" class="btn btn-outline">Explore Platform</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Genesis</h2>
+                <p>Pioneering the future of digital asset management since 2017.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Vision for 2025</h3>
+                    <p>As we move deeper into the Web3 era, Genesis Investments continues to innovate at the intersection of traditional finance and decentralized technologies.</p>
+                    <p>Our 2025 platform incorporates quantum-resistant security protocols, AI-powered portfolio management, and seamless cross-chain interoperability.</p>
+                    <div class="features">
+                        <div class="feature-card floating">
+                            <i class="fas fa-lock"></i>
+                            <h3>Quantum Security</h3>
+                            <p>Post-quantum cryptography standards to protect against future threats.</p>
+                        </div>
+                        <div class="feature-card floating" style="animation-delay: 0.2s;">
+                            <i class="fas fa-robot"></i>
+                            <h3>AI Optimized</h3>
+                            <p>Machine learning algorithms that adapt to market conditions in real-time.</p>
+                        </div>
+                        <div class="feature-card floating" style="animation-delay: 0.4s;">
+                            <i class="fas fa-link"></i>
+                            <h3>Cross-Chain</h3>
+                            <p>Native support for 25+ blockchains with atomic swap capabilities.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image floating">
+                    <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop" alt="Genesis Investments Team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Plans -->
+    <section id="investment">
+        <div class="container">
+            <div class="section-title">
+                <h2>Investment Solutions</h2>
+                <p>Tailored strategies for the modern crypto investor.</p>
+            </div>
+            <div class="plans">
+                <div class="plan-card floating">
+                    <h3>Core Holdings</h3>
+                    <div class="plan-price">$10K <span>/ min investment</span></div>
+                    <ul class="plan-features">
+                        <li>Blue-chip crypto assets</li>
+                        <li>Automated rebalancing</li>
+                        <li>Tax-loss harvesting</li>
+                        <li>Quarterly performance reports</li>
+                        <li>Basic DeFi integration</li>
+                    </ul>
+                    <a href="#" class="btn btn-dark">Explore Strategy</a>
+                </div>
+                <div class="plan-card popular floating" style="animation-delay: 0.2s;">
+                    <h3>Growth Portfolio</h3>
+                    <div class="plan-price">$50K <span>/ min investment</span></div>
+                    <ul class="plan-features">
+                        <li>Curated altcoin selection</li>
+                        <li>Staking rewards optimization</li>
+                        <li>NFT fund allocation</li>
+                        <li>Monthly strategy sessions</li>
+                        <li>Advanced DeFi strategies</li>
+                        <li>Institutional research</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary">Explore Strategy</a>
+                </div>
+                <div class="plan-card floating" style="animation-delay: 0.4s;">
+                    <h3>Venture Fund</h3>
+                    <div class="plan-price">$250K <span>/ min investment</span></div>
+                    <ul class="plan-features">
+                        <li>Early-stage token access</li>
+                        <li>DAO participation</li>
+                        <li>Metaverse land banking</li>
+                        <li>Weekly portfolio reviews</li>
+                        <li>VIP client services</li>
+                        <li>Exclusive airdrops</li>
+                        <li>Private deal flow</li>
+                    </ul>
+                    <a href="#" class="btn btn-dark">Explore Strategy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Insights -->
+    <section id="market">
+        <div class="container">
+            <div class="section-title">
+                <h2>Market Intelligence</h2>
+                <p>Real-time data and analysis for informed decisions.</p>
+            </div>
+            <div class="market-tabs">
+                <button class="tab-btn active" data-tab="charts">Charts</button>
+                <button class="tab-btn" data-tab="orderbook">Order Book</button>
+                <button class="tab-btn" data-tab="blog">Blog</button>
+            </div>
+            <div class="tab-content active" id="charts">
+                <div class="trading-chart-container">
+                    <div class="chart-header">
+                        <h3>BTC/USD</h3>
+                        <div class="chart-options">
+                            <select id="chart-timeframe">
+                                <option value="1h">1 Hour</option>
+                                <option value="1d">1 Day</option>
+                                <option value="1w">1 Week</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="tradingview-chart"></div>
+                </div>
+            </div>
+            <div class="tab-content" id="orderbook">
+                <div class="order-book">
+                    <div class="order-column">
+                        <h3>Buy Orders</h3>
+                        <ul class="order-list buy">
+                            <li class="order-item">
+                                <span class="amount">2.45 BTC</span>
+                                <span class="price">$68,412.34</span>
+                            </li>
+                            <li class="order-item">
+                                <span class="amount">1.87 BTC</span>
+                                <span class="price">$68,405.21</span>
+                            </li>
+                            <li class="order-item">
+                                <span class="amount">3.12 BTC</span>
+                                <span class="price">$68,398.76</span>
+                            </li>
+                            <li class="order-item">
+                                <span class="amount">0.95 BTC</span>
+                                <span class="price">$68,392.45</span>
+                            </li>
+                            <li class="order-item">
+                                <span class="amount">4.21 BTC</span>
+                                <span class="price">$68,385.90</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="order-column">
+                        <h3>Sell Orders</h3>
+                        <ul class="order-list sell">
+                            <li class="order-item">
+                                <span class="price">$68,425.67</span>
+                                <span class="amount">1.23 BTC</span>
+                            </li>
+                            <li class="order-item">
+                                <span class="price">$68,432.10</span>
+                                <span class="amount">2.15 BTC</span>
+                            </li>
+                            <li class="order-item">
+                                <span class="price">$68,438.45</span>
+                                <span class="amount">0.78 BTC</span>
+                            </li>
+                            <li class="order-item">
+                                <span class="price">$68,445.89</span>
+                                <span class="amount">1.92 BTC</span>
+                            </li>
+                            <li class="order-item">
+                                <span class="price">$68,452.30</span>
+                                <span class="amount">3.05 BTC</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-content" id="blog">
+                <div class="blog-grid">
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?q=80&w=2232&auto=format&fit=crop" alt="Crypto Blog">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">April 15, 2025</div>
+                            <h3>The State of Bitcoin in 2025</h3>
+                            <p>Analyzing Bitcoin's performance post-2024 halving and its evolving role in the digital economy.</p>
+                            <a href="https://www.blogger.com/crypto-trends-2025" class="blog-link" target="_blank">Read Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=2574&auto=format&fit=crop" alt="Crypto Blog">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">April 10, 2025</div>
+                            <h3>DeFi 3.0: What's New</h3>
+                            <p>Exploring the latest innovations in decentralized finance as we enter the third generation of protocols.</p>
+                            <a href="https://www.blogger.com/defi-3.0-guide" class="blog-link" target="_blank">Read Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <div class="blog-card">
+                        <div class="blog-image">
+                            <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=2574&auto=format&fit=crop" alt="Crypto Blog">
+                        </div>
+                        <div class="blog-content">
+                            <div class="blog-date">April 5, 2025</div>
+                            <h3>Regulatory Outlook for 2025</h3>
+                            <p>How global crypto regulations are shaping up and what it means for investors.</p>
+                            <a href="https://www.blogger.com/crypto-regulations-2025" class="blog-link" target="_blank">Read Article <i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Account/Wallet Section -->
+    <section id="account">
+        <div class="container">
+            <div class="section-title">
+                <h2>Digital Asset Management</h2>
+                <p>Secure, intuitive tools for managing your crypto portfolio.</p>
+            </div>
+            <div class="account-steps">
+                <div class="step-card">
+                    <h3>Biometric Authentication</h3>
+                    <p>Secure your account with facial recognition or fingerprint scanning.</p>
+                </div>
+                <div class="step-card">
+                    <h3>Smart Wallet</h3>
+                    <p>AI-powered wallet that optimizes gas fees and suggests transactions.</p>
+                </div>
+                <div class="step-card">
+                    <h3>DeFi Dashboard</h3>
+                    <p>Track all your decentralized finance positions in one interface.</p>
+                </div>
+                <div class="step-card">
+                    <h3>Tax Center</h3>
+                    <p>Automated tax reporting compliant with 2025 regulations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trading Platform -->
+    <section id="trading">
+        <div class="container">
+            <div class="section-title">
+                <h2>Trading Platform</h2>
+                <p>Professional tools for executing your strategies.</p>
+            </div>
+            <div class="platform-container">
+                <div class="platform-image floating">
+                    <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?q=80&w=2574&auto=format&fit=crop" alt="Trading Platform">
+                </div>
+                <div class="platform-features">
+                    <ul class="feature-list">
+                        <li>
+                            <i class="fas fa-robot"></i>
+                            <div>
+                                <h3>AI Execution</h3>
+                                <p>Algorithmic trading bots that learn your preferences.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h3>Instant Settlement</h3>
+                                <p>Near-instant trades with our high-performance matching engine.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-project-diagram"></i>
+                            <div>
+                                <h3>Cross-Chain Swaps</h3>
+                                <p>Trade across 25+ blockchains without wrapping assets.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h3>Secure Vault</h3>
+                                <p>Institutional-grade custody with MPC technology.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-primary" style="margin-top: 20px;">Start Trading</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Integration -->
+    <section id="payment">
+        <div class="container">
+            <div class="section-title">
+                <h2>Payment Options</h2>
+                <p>Multiple ways to fund your account.</p>
+            </div>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Mastercard_2019_logo.svg" alt="Mastercard">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg" alt="Visa">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/46/Bitcoin.svg" alt="Bitcoin">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Ethereum_logo_2014.svg" alt="Ethereum">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Stablecoin.svg" alt="Stablecoins">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Silvergate_Bank_logo.svg" alt="Silvergate">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/SWIFT_logo.svg" alt="SWIFT">
+                </div>
+                <div class="payment-method">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/Apple_Pay_logo.svg" alt="Apple Pay">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support/Community -->
+    <section id="support">
+        <div class="container">
+            <div class="section-title">
+                <h2>Support & Community</h2>
+                <p>We're here to help you navigate the crypto space.</p>
+            </div>
+            <div class="support-options">
+                <div class="support-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Get help anytime from our knowledgeable support team.</p>
+                    <button class="live-chat-btn" id="open-chat">
+                        <i class="fas fa-comment-dots"></i> Live Chat
+                    </button>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>Learning Center</h3>
+                    <p>Educational resources for both beginners and advanced traders.</p>
+                    <a href="#" class="btn btn-outline" style="background: transparent; color: var(--blue); border-color: var(--blue);">Explore Resources</a>
+                </div>
+                <div class="support-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Community</h3>
+                    <p>Connect with other crypto enthusiasts in our forums.</p>
+                    <a href="#" class="btn btn-outline" style="background: transparent; color: var(--blue); border-color: var(--blue);">Join Community</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust & Credibility -->
+    <section id="trust">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Trust Genesis</h2>
+                <p>Security and transparency are our top priorities.</p>
+            </div>
+            <div class="trust-badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <p>Quantum-Resistant</p>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-lock"></i>
+                    <p>MPC Technology</p>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-user-shield"></i>
+                    <p>$500M Insurance</p>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-certificate"></i>
+                    <p>Regulated</p>
+                </div>
+            </div>
+            <div class="testimonials">
+                <div class="section-title">
+                    <h3>What Our Users Say</h3>
+                </div>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            "Genesis has completely transformed how I manage my crypto portfolio. The AI tools have helped me optimize my returns while minimizing risk."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="User">
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Investor since 2023</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            "As a developer, I appreciate Genesis's commitment to security and their robust API. The cross-chain features have been game-changing for my projects."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="User">
+                            </div>
+                            <div class="author-info">
+                                <h4>Michael Chen</h4>
+                                <p>Developer since 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            "The institutional-grade security gives me peace of mind, and the customer support team is always responsive when I have questions."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="User">
+                            </div>
+                            <div class="author-info">
+                                <h4>David Martinez</h4>
+                                <p>Trader since 2022</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <div class="slider-dot active" data-slide="0"></div>
+                        <div class="slider-dot" data-slide="1"></div>
+                        <div class="slider-dot" data-slide="2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section id="newsletter">
+        <div class="container">
+            <div class="section-title">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for market insights and platform updates.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Genesis Investments</h3>
+                    <p>The premier platform for digital asset management in 2025 and beyond.</p>
+                    <div class="social-links" style="justify-content: flex-start; margin-top: 25px;">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Exchange</a></li>
+                        <li><a href="#">Wallet</a></li>
+                        <li><a href="#">Staking</a></li>
+                        <li><a href="#">DeFi</a></li>
+                        <li><a href="#">NFTs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Learn</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">API</a></li>
+                        <li><a href="#">Status</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Legal</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        <li><a href="#">Compliance</a></li>
+                        <li><a href="#">Licenses</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Genesis Investments. All rights reserved. Cryptocurrency trading involves risk.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot Widget -->
+    <div class="chatbot-container" id="chatbot-container">
+        <div class="chatbot-header">
+            <h4><i class="fas fa-robot"></i> Genesis Assistant</h4>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="chatbot-messages">
+            <div class="message support">
+                <div class="message-content">
+                    Hello! I'm your Genesis assistant. How can I help you today?
+                </div>
+                <div class="message-time">Just now</div>
+            </div>
+        </div>
+        <div class="chatbot-suggestions">
+            <button>What investment plans do you offer?</button>
+            <button>How do I create an account?</button>
+            <button>What's the minimum deposit?</button>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Ask about our services...">
+            <button><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <!-- Chatbot Toggle Button -->
+    <button class="chatbot-toggle-btn" id="chatbot-toggle">
+        <i class="fas fa-comment-dots"></i>
+    </button>
+
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('light-mode');
+            localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light' : 'dark');
+            
+            // Update icon
+            const icon = themeToggle.querySelector('i');
+            if (document.body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+
+            // Update TradingView theme if loaded
+            if (typeof TradingView !== 'undefined') {
+                const widget = document.getElementById('tradingview-chart').querySelector('iframe');
+                if (widget) {
+                    const widgetSrc = widget.src;
+                    widget.src = widgetSrc.replace(/theme=\w+/, `theme=${document.body.classList.contains('light-mode') ? 'light' : 'dark'}`);
+                }
+            }
+        });
+
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-mode');
+            themeToggle.querySelector('i').classList.remove('fa-moon');
+            themeToggle.querySelector('i').classList.add('fa-sun');
+        }
+
+        // Chatbot Toggle
+        const chatbotToggle = document.getElementById('chatbot-toggle');
+        const chatbotContainer = document.getElementById('chatbot-container');
+        const openChatBtn = document.getElementById('open-chat');
+        
+        chatbotToggle.addEventListener('click', () => {
+            chatbotContainer.classList.toggle('active');
+        });
+
+        openChatBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            chatbotContainer.classList.add('active');
+        });
+
+        // TradingView Widget
+        function loadTradingViewWidget() {
+            const script = document.createElement('script');
+            script.src = 'https://s3.tradingview.com/tv.js';
+            script.onload = () => {
+                new TradingView.widget({
+                    "autosize": true,
+                    "symbol": "BITSTAMP:BTCUSD",
+                    "interval": "60",
+                    "timezone": "Etc/UTC",
+                    "theme": document.body.classList.contains('light-mode') ? "light" : "dark",
+                    "style": "1",
+                    "locale": "en",
+                    "toolbar_bg": "#f1f3f6",
+                    "enable_publishing": false,
+                    "hide_top_toolbar": false,
+                    "hide_side_toolbar": false,
+                    "allow_symbol_change": true,
+                    "container_id": "tradingview-chart"
+                });
+            };
+            document.body.appendChild(script);
+        }
+
+        // Load TradingView when chart section is visible
+        const observer = new IntersectionObserver((entries) => {
+            if (entries[0].isIntersecting) {
+                loadTradingViewWidget();
+                observer.unobserve(entries[0].target);
+            }
+        }, {threshold: 0.1});
+
+        observer.observe(document.getElementById('market'));
+
+        // Chatbot functionality
+        document.querySelector('.chatbot-input button').addEventListener('click', sendMessage);
+        document.querySelector('.chatbot-input input').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        function sendMessage() {
+            const input = document.querySelector('.chatbot-input input');
+            const message = input.value.trim();
+            
+            if (message) {
+                // Add user message
+                addMessage(message, 'user');
+                input.value = '';
+                
+                // Simulate bot response
+                setTimeout(() => {
+                    const response = getBotResponse(message);
+                    addMessage(response, 'support');
+                }, 1000);
+            }
+        }
+
+        function addMessage(content, type) {
+            const messagesContainer = document.querySelector('.chatbot-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${type}`;
+            messageDiv.innerHTML = `
+                <div class="message-content">${content}</div>
+                <div class="message-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
+            `;
+            messagesContainer.appendChild(messageDiv);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+
+        function getBotResponse(message) {
+            const responses = {
+                "investment": "We offer three main investment plans: Core Holdings ($10K min), Growth Portfolio ($50K min), and Venture Fund ($250K min).",
+                "account": "You can create an account by clicking 'Get Started' and completing our secure registration process.",
+                "deposit": "The minimum deposit depends on your chosen plan, starting from $10,000 for our Core Holdings strategy.",
+                "default": "I'm sorry, I didn't understand that. Could you please rephrase your question?"
+            };
+            
+            if (message.toLowerCase().includes('investment') || message.toLowerCase().includes('plan')) {
+                return responses.investment;
+            } else if (message.toLowerCase().includes('account') || message.toLowerCase().includes('register')) {
+                return responses.account;
+            } else if (message.toLowerCase().includes('deposit') || message.toLowerCase().includes('minimum')) {
+                return responses.deposit;
+            } else {
+                return responses.default;
+            }
+        }
+
+        // Suggested questions
+        document.querySelectorAll('.chatbot-suggestions button').forEach(button => {
+            button.addEventListener('click', () => {
+                const question = button.textContent;
+                document.querySelector('.chatbot-input input').value = question;
+                sendMessage();
+            });
+        });
+
+        // Tab Switching for Market Insights
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Testimonial Slider
+        const testimonials = document.querySelectorAll('.testimonial');
+        const dots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            testimonials.forEach(testimonial => testimonial.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            testimonials[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => showSlide(index));
+        });
+
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % testimonials.length;
+            showSlide(currentSlide);
+        }, 7000);
+
+        // Simulate real-time price updates
+        function updatePrices() {
+            const coins = [
+                { id: 'btc-price', min: 68000, max: 70000 },
+                { id: 'eth-price', min: 3800, max: 4000 },
+                { id: 'sol-price', min: 200, max: 220 },
+                { id: 'usdc-price', min: 0.99, max: 1.01 }
+            ];
+
+            coins.forEach(coin => {
+                const element = document.getElementById(coin.id);
+                const currentPrice = parseFloat(element.textContent);
+                const change = (Math.random() * 0.02 - 0.01) * currentPrice;
+                const newPrice = currentPrice + change;
+                
+                // Ensure price stays within reasonable bounds
+                const clampedPrice = Math.max(coin.min, Math.min(coin.max, newPrice));
+                element.textContent = clampedPrice.toFixed(coin.id === 'usdc-price' ? 2 : 0);
+                
+                // Update change indicator
+                const changeElement = element.nextElementSibling;
+                const changePercent = (change / currentPrice * 100).toFixed(2);
+                changeElement.textContent = `${change >= 0 ? '+' : ''}${changePercent}%`;
+                changeElement.className = change >= 0 ? 'price-up' : 'price-down';
+            });
+        }
+
+        setInterval(updatePrices, 3000);
+
+        // Simulate order book updates
+        function updateOrderBook() {
+            const buyPrices = [68412.34, 68405.21, 68398.76, 68392.45, 68385.90];
+            const sellPrices = [68425.67, 68432.10, 68438.45, 68445.89, 68452.30];
+            
+            // Update buy orders
+            document.querySelectorAll('.buy .price').forEach((el, i) => {
+                const change = (Math.random() - 0.5) * 10;
+                const newPrice = buyPrices[i] + change;
+                el.textContent = `$${newPrice.toFixed(2)}`;
+            });
+            
+            // Update sell orders
+            document.querySelectorAll('.sell .price').forEach((el, i) => {
+                const change = (Math.random() - 0.5) * 10;
+                const newPrice = sellPrices[i] + change;
+                el.textContent = `$${newPrice.toFixed(2)}`;
+            });
+            
+            // Update amounts randomly
+            document.querySelectorAll('.amount').forEach(el => {
+                const current = parseFloat(el.textContent.split(' ')[0]);
+                const change = (Math.random() - 0.3) * 0.5;
+                const newAmount = Math.max(0.1, current + change).toFixed(2);
+                const coin = el.textContent.split(' ')[1];
+                el.textContent = `${newAmount} ${coin}`;
+            });
+        }
+
+        setInterval(updateOrderBook, 5000);
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Scroll animation
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.fade-in:not(.animated)');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                
+                if (elementPosition < windowHeight - 100) {
+                    element.classList.add('animated');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Initialize floating elements
+        document.querySelectorAll('.floating').forEach((el, i) => {
+            el.style.animationDelay = `${i * 0.1}s`;
+        });
+    </script>
+</body>
+</html>
